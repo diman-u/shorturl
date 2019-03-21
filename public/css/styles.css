@@ -1,0 +1,51 @@
+
+table tbody tr.done {
+    background-color: #dff0d8;
+}
+
+table tbody td, table thead th  {
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+table tbody td, table thead th  {
+    text-align: center;
+}
+
+table input.btn {
+    font-size: 14px;
+}
+
+a.titleTask {
+    color: #000000;
+}
+
+a.titleTask:hover {
+
+}
+
+.insideTask {
+    display: none;
+}
+
+.reklamaBlock, .pricepBlock {
+    display: flex;
+    align-items: last baseline;
+}
+
+.reklamaBlock input, .pricepBlock input {
+    margin-right: 5px;
+}
+
+.rowCenter {
+    display: flex;
+    justify-content: center;
+}
+
+#addTask .buttons{
+    margin-bottom: 50px;
+}
+
+.remCheck {
+    margin: 25px 0;
+}
