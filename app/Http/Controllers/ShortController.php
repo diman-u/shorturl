@@ -10,7 +10,12 @@ class ShortController extends Controller
     private $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     private $salt = 'wxyzABCDE';
     private $padding = 11;
-    private $hostname = 'http://dev.avtogorod43.ru/short';
+    private $hostname;
+
+    public function __construct()
+    {
+        $this->hostname = $_SERVER['HTTP_HOST'];
+    }
 
     public static function num_to_alpha($n, $s) {
         $b = strlen($s);
@@ -73,6 +78,7 @@ class ShortController extends Controller
      */
     public function store(Request $request)
     {
+
         if ($request->isMethod('post')) {
 
             $this->validate($request,[

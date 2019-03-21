@@ -12,6 +12,7 @@
 */
 
 
+
 Route::get('/', 'TasksController@getAll')->name('/');
 Route::get('/addTask', function () {
     return view('addTask');
@@ -37,3 +38,5 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Auth::routes();
+
+Route::get('/{url}', 'ShortController@index');
